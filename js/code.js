@@ -1,6 +1,7 @@
 // -------------------- HTML Elements --------------------
 
 // Dynamic Relationships
+
 const balancesRule = document.querySelector('#balancesRule');
 const editsRule = document.querySelector('#editsRule');
 const editsGraphicElement = document.querySelector('#editsGraphicElement');
@@ -15,6 +16,7 @@ const implementsInterface = document.querySelector('#implementsInterface');
 const determinesGraphicElement = document.querySelector('#determinesGraphicElement');
 
 // Conditionals and Events
+
 const conditionalRules = document.querySelector('#conditionalRules');
 const conditionalInterfaces = document.querySelector('#conditionalInterfaces');
 const eventPC = document.querySelector('#event');
@@ -77,6 +79,83 @@ createsEvent.addEventListener('click', e => {
     if (!bloked) { return }
     showInterface('../img/interfaces/5.png');
     unlock([createsPlot])
+});
+
+createsPlot.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer creates event" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/6.png');
+    unlock([describesChallenge])
+});
+
+describesChallenge.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer creates plot" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/7.png');
+    unlock([definesFlow])
+});
+
+definesFlow.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer describes challenge" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/8.png');
+    unlock([buildsRule])
+});
+
+buildsRule.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer defines flow" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/9.png');
+    unlock([balancesRule])
+});
+
+balancesRule.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer builds rule" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/10.png');
+    unlock([editsRule])
+});
+
+editsRule.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer balances rule" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/12.png');
 });
 
 // -------------------- Functions --------------------
