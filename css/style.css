@@ -1,0 +1,145 @@
+/* Pre-conceptual schema */
+
+.container{
+    position: relative;
+    
+    width: 2075px;
+    height: 2400px;
+
+    background-image: url("../img/pc-schema.png");
+    background-size: cover;
+}
+
+/* Dynamic relationships */
+
+#balancesRule{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#editsRule{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#editsGraphicElement{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#generatesWorkProduct{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#buildsRule{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#specifiesSpace{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#createsEvent{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#createsPlot{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#describesChallenge{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#definesFlow{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#implementsInterface{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
+
+#determinesGraphicElement{
+    position: absolute;
+    left: 1564px;
+    top: 372px;
+
+    width: 80px;
+    height: 30px;
+
+    border: 2px solid black
+}
