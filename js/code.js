@@ -25,6 +25,7 @@ const eventPC = document.querySelector('#event');
 
 let rulesUnlocked = 0;
 let interfacesUnlocked = 0;
+let workProductUnlocked = 0;
 
 conditionalRules.addEventListener('click', e => {
     if (!conditionalRules.classList.contains('clicked')) {
@@ -144,6 +145,13 @@ balancesRule.addEventListener('click', e => {
     if (!bloked) { return }
     showInterface('../img/interfaces/10.png');
     unlock([editsRule])
+
+    if (!balancesRule.classList.contains('clicked')) {
+        balancesRule.classList.add('clicked');
+        workProductUnlocked += 1;
+    }
+
+    if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
 });
 
 editsRule.addEventListener('click', e => {
@@ -156,6 +164,65 @@ editsRule.addEventListener('click', e => {
 
     if (!bloked) { return }
     showInterface('../img/interfaces/12.png');
+});
+
+determinesGraphicElement.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the previous condidional and the previous event.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/16.png');
+    unlock([implementsInterface])
+});
+
+implementsInterface.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer creates grapic element" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/10.png');
+    unlock([editsGraphicElement])
+
+    if (!implementsInterface.classList.contains('clicked')) {
+        implementsInterface.classList.add('clicked');
+        workProductUnlocked += 1;
+    }
+
+    if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
+});
+
+editsGraphicElement.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer implements interface" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/20.png');
+});
+
+generatesWorkProduct.addEventListener('click', e => {
+    let bloked = checkBlocked(
+        e.target,
+        'Relation blocked',
+        `Using this dynamic relationship is not yet allowed.
+        Click the "Game Designer balances rule" relationship
+        and the "Game Designer implements interface" relationship to unlock it.`
+    )
+
+    if (!bloked) { return }
+    showInterface('../img/interfaces/7.png');
+    unlock([definesFlow])
 });
 
 // -------------------- Functions --------------------
