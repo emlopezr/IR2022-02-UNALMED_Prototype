@@ -31,18 +31,20 @@ conditionalRules.addEventListener('click', e => {
     if (!conditionalRules.classList.contains('clicked')) {
         conditionalRules.classList.add('clicked');
         rulesUnlocked += 1;
+
+        if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
     }
 
-    if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
 });
 
 conditionalInterfaces.addEventListener('click', e => {
     if (!conditionalInterfaces.classList.contains('clicked')) {
         conditionalInterfaces.classList.add('clicked');
         interfacesUnlocked += 1;
+
+        if (interfacesUnlocked == 2) { unlock([determinesGraphicElement]) }
     }
 
-    if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
 });
 
 eventPC.addEventListener('click', e => {
@@ -50,10 +52,11 @@ eventPC.addEventListener('click', e => {
         eventPC.classList.add('clicked');
         rulesUnlocked += 1;
         interfacesUnlocked += 1;
+
+        if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
+        if (interfacesUnlocked == 2) { unlock([determinesGraphicElement]) }
     }
 
-    if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
-    if (interfacesUnlocked == 2) { unlock([determinesGraphicElement]) }
 });
 
 specifiesSpace.addEventListener('click', e => {
@@ -149,9 +152,10 @@ balancesRule.addEventListener('click', e => {
     if (!balancesRule.classList.contains('clicked')) {
         balancesRule.classList.add('clicked');
         workProductUnlocked += 1;
+
+        if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
     }
 
-    if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
 });
 
 editsRule.addEventListener('click', e => {
@@ -194,9 +198,10 @@ implementsInterface.addEventListener('click', e => {
     if (!implementsInterface.classList.contains('clicked')) {
         implementsInterface.classList.add('clicked');
         workProductUnlocked += 1;
+
+        if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
     }
 
-    if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
 });
 
 editsGraphicElement.addEventListener('click', e => {
@@ -245,6 +250,6 @@ function showInterface(imageURL) {
 
 function unlock(elementList) {
     elementList.forEach(element => {
-        element.classList.toggle('blocked');
+        element.classList.remove('blocked');
     });
 }
