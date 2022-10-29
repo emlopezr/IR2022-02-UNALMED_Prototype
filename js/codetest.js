@@ -65,7 +65,7 @@ specifiesSpace.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/4.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/4.png');
     unlock([createsEvent])
 });
 
@@ -78,7 +78,7 @@ createsEvent.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/5.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/5.png');
     unlock([createsPlot])
 });
 
@@ -91,7 +91,7 @@ createsPlot.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/6.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/6.png');
     unlock([describesChallenge])
 });
 
@@ -104,7 +104,7 @@ describesChallenge.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/7.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/7.png');
     unlock([definesFlow])
 });
 
@@ -117,7 +117,7 @@ definesFlow.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/8.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/8.png');
     unlock([buildsRule])
 });
 
@@ -130,7 +130,7 @@ buildsRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/9.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/9.png');
     unlock([balancesRule])
 });
 
@@ -143,7 +143,7 @@ balancesRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/10.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/10.png');
     unlock([editsRule])
 
     if (!balancesRule.classList.contains('clicked')) {
@@ -163,7 +163,7 @@ editsRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/12.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/12.png');
 });
 
 determinesGraphicElement.addEventListener('click', e => {
@@ -175,7 +175,7 @@ determinesGraphicElement.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/16.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/16.png');
     unlock([implementsInterface])
 });
 
@@ -188,7 +188,7 @@ implementsInterface.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/10.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/10.png');
     unlock([editsGraphicElement])
 
     if (!implementsInterface.classList.contains('clicked')) {
@@ -208,7 +208,7 @@ editsGraphicElement.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/20.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/20.png');
 });
 
 generatesWorkProduct.addEventListener('click', e => {
@@ -221,7 +221,7 @@ generatesWorkProduct.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/7.png');
+    showInterface('https://lopezemmanuel.github.io/IR2022-02-UNALMED_AlphaPrototype/img/interfaces/7.png');
     unlock([definesFlow])
 });
 
