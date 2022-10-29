@@ -1,8 +1,21 @@
+/* General styles */
+
+.element {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.blocked {
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+
 /* Pre-conceptual schema */
 
-.container{
+.container {
     position: relative;
-    
+
     width: 2075px;
     height: 2400px;
 
@@ -12,134 +25,139 @@
 
 /* Dynamic relationships */
 
-#balancesRule{
+#balancesRule {
     position: absolute;
     left: 1564px;
     top: 372px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#editsRule{
+#editsRule {
     position: absolute;
-    left: 1564px;
-    top: 372px;
+    left: 1884px;
+    top: 402px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#editsGraphicElement{
+#editsGraphicElement {
     position: absolute;
-    left: 1564px;
-    top: 372px;
+    left: 1884px;
+    top: 462px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#generatesWorkProduct{
+#generatesWorkProduct {
     position: absolute;
-    left: 1564px;
-    top: 372px;
+    left: 1884px;
+    top: 522px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#buildsRule{
+#buildsRule {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 597px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#specifiesSpace{
+#specifiesSpace {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 657px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#createsEvent{
+#createsEvent {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 878px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#createsPlot{
+#createsPlot {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 1138px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#describesChallenge{
+#describesChallenge {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 1287px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#definesFlow{
+#definesFlow {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 1452px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#implementsInterface{
+#implementsInterface {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 1732px;
 
     width: 80px;
     height: 30px;
-
-    border: 2px solid black
 }
 
-#determinesGraphicElement{
+#determinesGraphicElement {
     position: absolute;
     left: 1564px;
-    top: 372px;
+    top: 1822px;
 
     width: 80px;
     height: 30px;
+}
 
-    border: 2px solid black
+/* Conditionals and Events */
+
+#conditionalRules {
+    position: absolute;
+    left: 44px;
+    top: 832px;
+
+    width: 880px;
+    height: 424px;
+}
+
+#conditionalInterfaces {
+    position: absolute;
+    left: 43px;
+    top: 1487px;
+
+    width: 880px;
+    height: 424px;
+}
+
+#event {
+    position: absolute;
+    left: 391px;
+    top: 1971px;
+
+    width: 180px;
+    height: 190px;
 }
