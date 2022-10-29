@@ -1,5 +1,9 @@
 /* General styles */
 
+* {
+    font-family: sans-serif;
+}
+
 .element {
     cursor: pointer;
     border: 2px solid black;
