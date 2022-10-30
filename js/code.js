@@ -21,7 +21,19 @@ const conditionalRules = document.querySelector('#conditionalRules');
 const conditionalInterfaces = document.querySelector('#conditionalInterfaces');
 const eventPC = document.querySelector('#event');
 
-// -------------------- Click elements --------------------
+// -------------------- Start of the prorotype --------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    Swal.fire(
+        'Alpha Prototype - Team #2',
+        `You can click in the conditionals, events, dynamic reationships and goal relationships.
+        For example, the first thing you should try is to click on the conditionals and the event
+        to unlock the main dynamic relationship chains of the application.`,
+        'info'
+    )
+})
+
+// -------------------- Click elements in order --------------------
 
 let rulesUnlocked = 0;
 let interfacesUnlocked = 0;
@@ -32,7 +44,15 @@ conditionalRules.addEventListener('click', e => {
         conditionalRules.classList.add('clicked');
         rulesUnlocked += 1;
 
-        if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
+        if (rulesUnlocked == 2) {
+            unlock([specifiesSpace])
+
+            Swal.fire(
+                'Unlock!',
+                `"Game Designer specifies space" unlocked`,
+                'success'
+            )
+        }
     }
 
 });
@@ -42,7 +62,16 @@ conditionalInterfaces.addEventListener('click', e => {
         conditionalInterfaces.classList.add('clicked');
         interfacesUnlocked += 1;
 
-        if (interfacesUnlocked == 2) { unlock([determinesGraphicElement]) }
+        if (interfacesUnlocked == 2) {
+            unlock([determinesGraphicElement])
+
+            Swal.fire(
+                'Unlock!',
+                `"Game Designer determines graphic element" unlocked`,
+                'success'
+            )
+
+        }
     }
 
 });
@@ -53,8 +82,25 @@ eventPC.addEventListener('click', e => {
         rulesUnlocked += 1;
         interfacesUnlocked += 1;
 
-        if (rulesUnlocked == 2) { unlock([specifiesSpace]) }
-        if (interfacesUnlocked == 2) { unlock([determinesGraphicElement]) }
+        if (rulesUnlocked == 2) {
+            unlock([specifiesSpace])
+
+            Swal.fire(
+                'Unlock!',
+                `"Game Designer specifies space" unlocked`,
+                'success'
+            )
+        }
+
+        if (interfacesUnlocked == 2) {
+            unlock([determinesGraphicElement])
+
+            Swal.fire(
+                'Unlock!',
+                `"Game Designer determines graphic element" unlocked`,
+                'success'
+            )
+        }
     }
 
 });
@@ -68,7 +114,7 @@ specifiesSpace.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/4.png');
+    showInterface('img/interfaces/1.png', '"Game designer creates event" unlocked');
     unlock([createsEvent])
 });
 
@@ -81,7 +127,7 @@ createsEvent.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/5.png');
+    showInterface('img/interfaces/2.png', '"Game designer creates plot" unlocked');
     unlock([createsPlot])
 });
 
@@ -94,7 +140,7 @@ createsPlot.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/6.png');
+    showInterface('img/interfaces/3.png', '"Game designer describes challenge" unlocked');
     unlock([describesChallenge])
 });
 
@@ -107,7 +153,7 @@ describesChallenge.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/7.png');
+    showInterface('img/interfaces/4.png', '"Game designer defines flow" unlocked');
     unlock([definesFlow])
 });
 
@@ -120,7 +166,7 @@ definesFlow.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/8.png');
+    showInterface('img/interfaces/5.png', '"Game designer builds rule" unlocked');
     unlock([buildsRule])
 });
 
@@ -133,7 +179,7 @@ buildsRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/9.png');
+    showInterface('img/interfaces/6.png', '"Game designer balances rule" unlocked');
     unlock([balancesRule])
 });
 
@@ -146,14 +192,22 @@ balancesRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/10.png');
+    showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
     unlock([editsRule])
 
     if (!balancesRule.classList.contains('clicked')) {
         balancesRule.classList.add('clicked');
         workProductUnlocked += 1;
 
-        if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
+        if (workProductUnlocked === 2) {
+            unlock([generatesWorkProduct])
+
+            Swal.fire(
+                'Unlock!',
+                `"Game Designer generates work product" unlocked`,
+                'success'
+            )
+        }
     }
 
 });
@@ -167,7 +221,7 @@ editsRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/12.png');
+    showInterface('img/interfaces/8.png');
 });
 
 determinesGraphicElement.addEventListener('click', e => {
@@ -179,7 +233,7 @@ determinesGraphicElement.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/16.png');
+    showInterface('img/interfaces/9.png', '"Game designer implements interface" unlocked');
     unlock([implementsInterface])
 });
 
@@ -192,14 +246,23 @@ implementsInterface.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/10.png');
+    showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
     unlock([editsGraphicElement])
 
     if (!implementsInterface.classList.contains('clicked')) {
         implementsInterface.classList.add('clicked');
         workProductUnlocked += 1;
 
-        if (workProductUnlocked === 2) { unlock([generatesWorkProduct]) }
+        if (workProductUnlocked === 2) {
+            unlock([generatesWorkProduct])
+
+            Swal.fire(
+                'Unlock!',
+                `"Game Designer generates work product" unlocked`,
+                'success'
+            )
+
+        }
     }
 
 });
@@ -213,7 +276,7 @@ editsGraphicElement.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/20.png');
+    showInterface('img/interfaces/10.png');
 });
 
 generatesWorkProduct.addEventListener('click', e => {
@@ -226,8 +289,7 @@ generatesWorkProduct.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('../img/interfaces/7.png');
-    unlock([definesFlow])
+    showInterface('img/interfaces/11.png');
 });
 
 // -------------------- Functions --------------------
@@ -241,10 +303,11 @@ function checkBlocked(element, title, message) {
     return true;
 }
 
-function showInterface(imageURL) {
+function showInterface(imageURL, message = "") {
     Swal.fire({
         width: '64em',
-        imageUrl: imageURL
+        imageUrl: imageURL,
+        text: message
     })
 }
 

@@ -6,10 +6,12 @@
 
 .element {
     cursor: pointer;
+
+    transition: backdrop-filter 0.5s ease;
 }
 
 .blocked {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
 
 
