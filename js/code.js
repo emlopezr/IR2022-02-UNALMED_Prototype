@@ -210,6 +210,8 @@ balancesRule.addEventListener('click', e => {
         } else {
             showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
         }
+    } else {
+        showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
     }
 
 });
@@ -268,6 +270,8 @@ implementsInterface.addEventListener('click', e => {
             showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
 
         }
+    } else {
+        showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
     }
 
 });
