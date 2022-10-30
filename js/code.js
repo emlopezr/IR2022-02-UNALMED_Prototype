@@ -192,7 +192,7 @@ balancesRule.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
+
     unlock([editsRule])
 
     if (!balancesRule.classList.contains('clicked')) {
@@ -204,9 +204,11 @@ balancesRule.addEventListener('click', e => {
 
             Swal.fire(
                 'Unlock!',
-                `"Game Designer generates work product" unlocked`,
+                `"Game designer edits rule" and "Game Designer generates work product" unlocked`,
                 'success'
             )
+        } else {
+            showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
         }
     }
 
@@ -246,7 +248,7 @@ implementsInterface.addEventListener('click', e => {
     )
 
     if (!bloked) { return }
-    showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
+
     unlock([editsGraphicElement])
 
     if (!implementsInterface.classList.contains('clicked')) {
@@ -258,9 +260,12 @@ implementsInterface.addEventListener('click', e => {
 
             Swal.fire(
                 'Unlock!',
-                `"Game Designer generates work product" unlocked`,
+                `"Game designer edits graphic element" and "Game Designer generates work product" unlocked `,
                 'success'
             )
+
+        } else {
+            showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
 
         }
     }
