@@ -1,4 +1,4 @@
-# Alpha Prototype 🐍
+# Alpha Prototype
 - **Materia:** Ingeniería de Requisitos
 - **Profesor:** Carlos Mario Zapata Jaramillo
 - **Institución:** Universidad Nacional de Colombia sede Medellín
