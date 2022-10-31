@@ -1,5 +1,10 @@
 // -------------------- HTML Elements --------------------
 
+// Buttons
+
+const help = document.querySelector('#help');
+const team = document.querySelector('#team');
+
 // Dynamic Relationships
 
 const balancesRule = document.querySelector('#balancesRule');
@@ -19,17 +24,40 @@ const determinesGraphicElement = document.querySelector('#determinesGraphicEleme
 
 const conditionalRules = document.querySelector('#conditionalRules');
 const conditionalInterfaces = document.querySelector('#conditionalInterfaces');
-const eventPC = document.querySelector('#event');
+const triggerEvent = document.querySelector('#triggerEvent');
 
 // -------------------- Start of the prorotype --------------------
 
 document.addEventListener('DOMContentLoaded', () => {
     Swal.fire(
-        'Alpha Prototype - Team #2',
+        'Alpha Prototype',
         `You can click in the conditionals, events, dynamic reationships and goal relationships.
         For example, the first thing you should try is to click on the conditionals and the event
         to unlock the main dynamic relationship chains of the application.`,
         'info'
+    )
+})
+
+// Info buttons
+
+help.addEventListener('click', e => {
+    Swal.fire(
+        'Alpha Prototype',
+        `You can click in the conditionals, events, dynamic reationships and goal relationships.
+        For example, the first thing you should try is to click on the conditionals and the event
+        to unlock the main dynamic relationship chains of the application.`,
+        'info'
+    )
+})
+
+team.addEventListener('click', e => {
+    Swal.fire(
+        'Team #2',
+        `Andrés Felipe Aparicio Mestre,
+        David Toro Arango,
+        Emmanuel López Rodríguez,
+        Maria Paula Duque Muñoz.
+        `,
     )
 })
 
@@ -76,9 +104,9 @@ conditionalInterfaces.addEventListener('click', e => {
 
 });
 
-eventPC.addEventListener('click', e => {
-    if (!eventPC.classList.contains('clicked')) {
-        eventPC.classList.add('clicked');
+triggerEvent.addEventListener('click', e => {
+    if (!triggerEvent.classList.contains('clicked')) {
+        triggerEvent.classList.add('clicked');
         rulesUnlocked += 1;
         interfacesUnlocked += 1;
 

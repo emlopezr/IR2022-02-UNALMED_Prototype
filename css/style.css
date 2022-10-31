@@ -4,20 +4,31 @@
     font-family: sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
 .element {
     cursor: pointer;
-
     transition: backdrop-filter 0.5s ease;
 }
 
 .blocked {
     backdrop-filter: blur(3px);
+    border-radius: 15px;
 }
 
+.info {
+    border-radius: 50%;
+    border: 5px solid black;
+    padding: 5px;
+    cursor: pointer;
+    background-color: white;
+}
 
 /* Pre-conceptual schema */
 
-.container {
+.pc-schema {
     position: relative;
 
     width: 2075px;
@@ -25,6 +36,26 @@
 
     background-image: url("../img/pc-schema.png");
     background-size: cover;
+}
+
+/* Buttons */
+
+#help {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+
+    width: 30px;
+    height: 30px;
+}
+
+#team {
+    position: fixed;
+    left: 80px;
+    top: 20px;
+
+    width: 30px;
+    height: 30px;
 }
 
 /* Dynamic relationships */
@@ -157,11 +188,157 @@
     height: 424px;
 }
 
-#event {
+#triggerEvent {
     position: absolute;
     left: 391px;
     top: 1971px;
 
     width: 180px;
     height: 190px;
+}
+
+/* Goal Relationships */
+
+#developingGame {
+    position: absolute;
+    left: 591px;
+    top: 307px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#refiningRule {
+    position: absolute;
+    left: 1121px;
+    top: 322px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#guaranteeingBalances {
+    position: absolute;
+    left: 1431px;
+    top: 407px;
+
+    width: 93px;
+    height: 30px;
+}
+
+#allowingBuilds {
+    position: absolute;
+    left: 1404px;
+    top: 624px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#ensuringSpecifies {
+    position: absolute;
+    left: 1691px;
+    top: 687px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#estabilshingSpace {
+    position: absolute;
+    left: 1084px;
+    top: 757px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#makingHasCoherence {
+    position: absolute;
+    left: 1274px;
+    top: 911px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#guaranteeingCreates {
+    position: absolute;
+    left: 1691px;
+    top: 941px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#elaboratingPlot {
+    position: absolute;
+    left: 1154px;
+    top: 1061px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#developingChallenge {
+    position: absolute;
+    left: 983px;
+    top: 1231px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#takingCareOfDescribes {
+    position: absolute;
+    left: 1694px;
+    top: 1332px;
+
+    width: 93px;
+    height: 30px;
+}
+
+#allowingDefines {
+    position: absolute;
+    left: 1698px;
+    top: 1507px;
+
+    width: 93px;
+    height: 30px;
+}
+
+#developingFlow {
+    position: absolute;
+    left: 1041px;
+    top: 1657px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#developingInterface {
+    position: absolute;
+    left: 1184px;
+    top: 1777px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#allowingDetermines {
+    position: absolute;
+    left: 1388px;
+    top: 1777px;
+
+    width: 80px;
+    height: 30px;
+}
+
+#developingGraphicElement {
+    position: absolute;
+    left: 1394px;
+    top: 1911px;
+
+    width: 80px;
+    height: 30px;
 }
