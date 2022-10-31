@@ -8,6 +8,10 @@ img {
     width: 100%;
 }
 
+pre{
+    font-family: sans-serif;
+}
+
 .element {
     cursor: pointer;
     transition: backdrop-filter 0.5s ease;

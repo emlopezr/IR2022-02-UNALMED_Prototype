@@ -26,6 +26,25 @@ const conditionalRules = document.querySelector('#conditionalRules');
 const conditionalInterfaces = document.querySelector('#conditionalInterfaces');
 const triggerEvent = document.querySelector('#triggerEvent');
 
+// Goal Relationships
+
+const developingGame = document.querySelector('#developingGame');
+const refiningRule = document.querySelector('#refiningRule');
+const guaranteeingBalances = document.querySelector('#guaranteeingBalances');
+const allowingBuilds = document.querySelector('#allowingBuilds');
+const ensuringSpecifies = document.querySelector('#ensuringSpecifies');
+const estabilshingSpace = document.querySelector('#estabilshingSpace');
+const makingHasCoherence = document.querySelector('#makingHasCoherence');
+const guaranteeingCreates = document.querySelector('#guaranteeingCreates');
+const elaboratingPlot = document.querySelector('#elaboratingPlot');
+const developingChallenge = document.querySelector('#developingChallenge');
+const takingCareOfDescribes = document.querySelector('#takingCareOfDescribes');
+const allowingDefines = document.querySelector('#allowingDefines');
+const developingFlow = document.querySelector('#developingFlow');
+const developingInterface = document.querySelector('#developingInterface');
+const allowingDetermines = document.querySelector('#allowingDetermines');
+const developingGraphicElement = document.querySelector('#developingGraphicElement');
+
 // -------------------- Start of the prorotype --------------------
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,17 +70,14 @@ help.addEventListener('click', e => {
 })
 
 team.addEventListener('click', e => {
-    Swal.fire(
-        'Team #2',
-        `Andrés Felipe Aparicio Mestre,
-        David Toro Arango,
-        Emmanuel López Rodríguez,
-        Maria Paula Duque Muñoz.
-        `,
-    )
+    Swal.fire({
+        title: 'Team #2',
+        html: `<pre>Andrés Felipe Aparicio Mestre\nDavid Esteban Toro Arango\nEmmanuel López Rodríguez\nMaria Paula Duque Muñoz</pre>`,
+    })
 })
 
-// -------------------- Click elements in order --------------------
+// -------------------- Click dynamic relationships in order --------------------
+// -------------------- Click conditionals and trigger events --------------------
 
 let rulesUnlocked = 0;
 let interfacesUnlocked = 0;
@@ -328,6 +344,87 @@ generatesWorkProduct.addEventListener('click', e => {
     if (!bloked) { return }
     showInterface('img/interfaces/11.png');
 });
+
+// -------------------- Goal Relationships --------------------
+
+withoutKPI = [
+    developingGame,
+    guaranteeingBalances,
+    allowingBuilds,
+    ensuringSpecifies,
+    guaranteeingCreates,
+    takingCareOfDescribes,
+    allowingDefines,
+    allowingDetermines,
+    developingGraphicElement
+]
+
+withoutKPI.forEach(element => {
+    element.addEventListener('click', e => {
+        Swal.fire({
+            title: 'Goal withou KPI',
+            html: `This goal does not have an associated KPI, try to click another.`,
+            icon: 'error'
+        })
+    })
+})
+
+refiningRule.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Refining rule',
+        html: `<pre><b>CSF:</b> Rules balancing.\n<b>KPI:</b> User perception.\n<b>Formula:</b> Survey about the game balance</pre>`,
+        icon: 'question'
+    })
+})
+
+estabilshingSpace.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Establishing space',
+        html: `<pre><b>CSF:</b> Space definition.\n<b>KPI:</b> Game space consistency.\n<b>Formula:</b> Total number of different\nused game space types</pre>`,
+        icon: 'question'
+    })
+})
+
+elaboratingPlot.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Elaborating plot',
+        html: `<pre><b>CSF:</b> Plot creation.\n<b>KPI:</b> Total event coherence rate.\n<b>Formula:</b> Coherent events/Total events</pre>`,
+        icon: 'question'
+    })
+})
+
+makingHasCoherence.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Making event has coherence',
+        html: `<pre><b>CSF:</b> Event creation.\n<b>KPI:</b> User event coherence perception.\n<b>Formula:</b> Survey about the event coherence</pre>`,
+        icon: 'question'
+    })
+})
+
+developingChallenge.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Developing challenge',
+        html: `<pre><b>CSF:</b> Challenge description.\n<b>KPI:</b> Challenge difficulty level mean.\n<b>Formula:</b> Summatory of all difficulty\nlevels of the challenges/Total number of challenges</pre>`,
+        icon: 'question'
+    })
+})
+
+developingFlow.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Developing flow',
+        html: `<pre><b>CSF:</b> Game flow definition.\n<b>KPI:</b> User opinion of the game flow.\n<b>Formula:</b> Survey about the game flow</pre>`,
+        icon: 'question'
+    })
+})
+
+developingInterface.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Interface suitability',
+        html: `<pre><b>CSF:</b> Space definition.\n<b>KPI:</b> Diegetic and non-diegetic graphic\nelements balance.\n<b>Formula:</b> Number of diegetic\nelements/Number of non-diegetic elements</pre>`,
+        icon: 'question'
+    })
+})
+
 
 // -------------------- Functions --------------------
 
