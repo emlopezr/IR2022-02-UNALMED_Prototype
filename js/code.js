@@ -92,7 +92,7 @@ conditionalRules.addEventListener('click', e => {
             unlock([specifiesSpace])
 
             Swal.fire(
-                'Unlock!',
+                'Unlock',
                 `"Game Designer specifies space" unlocked`,
                 'success'
             )
@@ -110,7 +110,7 @@ conditionalInterfaces.addEventListener('click', e => {
             unlock([determinesGraphicElement])
 
             Swal.fire(
-                'Unlock!',
+                'Unlock',
                 `"Game Designer determines graphic element" unlocked`,
                 'success'
             )
@@ -130,7 +130,7 @@ triggerEvent.addEventListener('click', e => {
             unlock([specifiesSpace])
 
             Swal.fire(
-                'Unlock!',
+                'Unlock',
                 `"Game Designer specifies space" unlocked`,
                 'success'
             )
@@ -140,7 +140,7 @@ triggerEvent.addEventListener('click', e => {
             unlock([determinesGraphicElement])
 
             Swal.fire(
-                'Unlock!',
+                'Unlock',
                 `"Game Designer determines graphic element" unlocked`,
                 'success'
             )
@@ -247,7 +247,7 @@ balancesRule.addEventListener('click', e => {
             unlock([generatesWorkProduct])
 
             Swal.fire(
-                'Unlock!',
+                'Unlock',
                 `"Game designer edits rule" and "Game Designer generates work product" unlocked`,
                 'success'
             )
@@ -305,7 +305,7 @@ implementsInterface.addEventListener('click', e => {
             unlock([generatesWorkProduct])
 
             Swal.fire(
-                'Unlock!',
+                'Unlock',
                 `"Game designer edits graphic element" and "Game Designer generates work product" unlocked `,
                 'success'
             )
@@ -362,7 +362,7 @@ withoutKPI = [
 withoutKPI.forEach(element => {
     element.addEventListener('click', e => {
         Swal.fire({
-            title: 'Goal withou KPI',
+            title: 'Goal without KPI',
             html: `This goal does not have an associated KPI, try to click another.`,
             icon: 'error'
         })
