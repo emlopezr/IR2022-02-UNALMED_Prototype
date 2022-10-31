@@ -4,7 +4,7 @@
 - **Institución:** Universidad Nacional de Colombia sede Medellín
 - **Semestre:** 2022-2
 
-## Equipo de trabajo (Equipo 1)
+## Equipo de trabajo - Team #2
 - Emmanuel López Rodríguez - [emlopezr@unal.edu.co](mailto:emlopezr@unal.edu.co)
 - David Esteban Toro Arango - [datoro@unal.edu.co](mailto:datoro@unal.edu.co)
 - Andrés Felipe Aparicio Mestre - [anapariciom@unal.edu.co](mailto:anapariciom@unal.edu.co)
