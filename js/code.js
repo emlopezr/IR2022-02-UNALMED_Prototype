@@ -72,7 +72,7 @@ help.addEventListener('click', e => {
 team.addEventListener('click', e => {
     Swal.fire({
         title: 'Team #2',
-        html: `<pre>Andrés Felipe Aparicio Mestre\nDavid Esteban Toro Arango\nEmmanuel López Rodríguez\nMaria Paula Duque Muñoz</pre>`,
+        html: `<pre><b>Project:</b> Game Design Best Practices at Quintessence\n\n<b>Authors:</b>\nAndrés Felipe Aparicio Mestre\nDavid Esteban Toro Arango\nEmmanuel López Rodríguez\nMaria Paula Duque Muñoz\n\n<b>Course:</b> Requirements Engineering\n<b>Professor:</b> Carlos Mario Zapata Jaramillo\n\n<b>University:</b> Universidad Nacional de Colombia\nSede Medellín. Facultad de Minas\n<b>Semester:</b> 2022-2</pre>`,
     })
 })
 
