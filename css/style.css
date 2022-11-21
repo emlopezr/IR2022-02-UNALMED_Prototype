@@ -12,6 +12,10 @@ pre{
     font-family: sans-serif;
 }
 
+label {
+    font-weight: bold;
+}
+
 .element {
     cursor: pointer;
     transition: backdrop-filter 0.5s ease;
@@ -22,12 +26,30 @@ pre{
     border-radius: 15px;
 }
 
-.info {
+.infoPage {
     border-radius: 50%;
     border: 5px solid black;
     padding: 5px;
     cursor: pointer;
     background-color: white;
+}
+
+.formInput {
+    margin-top: 10px;
+}
+
+.formGroup {
+    margin-top: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formGroup p {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 
 /* Pre-conceptual schema */
