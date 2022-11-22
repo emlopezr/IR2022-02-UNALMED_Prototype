@@ -16,6 +16,26 @@ label {
     font-weight: bold;
 }
 
+table {
+    border-spacing: 0;
+    border: 1px solid #545454;
+}
+
+th {
+    padding: 10px 30px;
+    color: white;
+    background-color: #545454;
+    border: 2px solid #545454;
+    text-transform: capitalize;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border: 1px solid #545454;
+}
+
 .element {
     cursor: pointer;
     transition: backdrop-filter 0.5s ease;
@@ -366,5 +386,70 @@ label {
     top: 1911px;
 
     width: 80px;
+    height: 30px;
+}
+
+/* Class concepts */
+
+#space {
+    position: absolute;
+    left: 1064px;
+    top: 692px;
+
+    width: 120px;
+    height: 30px;
+}
+
+#event {
+    position: absolute;
+    left: 1064px;
+    top: 963px;
+
+    width: 120px;
+    height: 30px;
+}
+
+#plot {
+    position: absolute;
+    left: 1064px;
+    top: 1133px;
+
+    width: 120px;
+    height: 30px;
+}
+
+#challenge {
+    position: absolute;
+    left: 1074px;
+    top: 1287px;
+
+    width: 120px;
+    height: 30px;
+}
+
+#flow {
+    position: absolute;
+    left: 1074px;
+    top: 1567px;
+
+    width: 120px;
+    height: 30px;
+}
+
+#rule {
+    position: absolute;
+    left: 1064px;
+    top: 412px;
+
+    width: 120px;
+    height: 30px;
+}
+
+#graphicElement {
+    position: absolute;
+    left: 1404px;
+    top: 1997px;
+
+    width: 120px;
     height: 30px;
 }

@@ -45,6 +45,16 @@ const developingInterface = document.querySelector('#developingInterface');
 const allowingDetermines = document.querySelector('#allowingDetermines');
 const developingGraphicElement = document.querySelector('#developingGraphicElement');
 
+// Class concepts
+
+const classSpace = document.querySelector('#space');
+const classEvent = document.querySelector('#event');
+const classPlot = document.querySelector('#plot');
+const classChallenge = document.querySelector('#challenge');
+const classFlow = document.querySelector('#flow');
+const classRule = document.querySelector('#rule');
+const classGraphicElement = document.querySelector('#graphicElement');
+
 // -------------------- LocalStorage for class concepts --------------------
 
 let rules = JSON.parse(localStorage.getItem('rules')) || []
@@ -433,9 +443,9 @@ function createGraphicElement(e) {
     const nameGE = document.querySelector('#nameGE').value
     const descriptionGE = document.querySelector('#descriptionGE').value
     const imageGE = document.querySelector('#imageGE').value
-    const interfaceSpaceGE = document.querySelector('#interfaceSpaceGE').value
-    const characterGE = document.querySelector('#characterGE').value
-    const sceneGE = document.querySelector('#sceneGE').value
+    let interfaceSpaceGE = document.querySelector('#interfaceSpaceGE').value
+    let characterGE = document.querySelector('#characterGE').value
+    let sceneGE = document.querySelector('#sceneGE').value
 
     if (typeGE == 'diegetic') {
         sceneGE = 'NA'
@@ -607,7 +617,7 @@ createsEvent.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('Event', formCreatesEvent);
+    showForm('Event', formCreatesEvent, '#formCreatesEvent', createEvent);
     unlock([createsPlot])
 });
 
@@ -620,7 +630,7 @@ createsPlot.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('Plot', formCreatesPlot);
+    showForm('Plot', formCreatesPlot, '#formCreatesPlot', createPlot);
     unlock([describesChallenge])
 });
 
@@ -633,7 +643,7 @@ describesChallenge.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('Challenge', formDescribesChallenge);
+    showForm('Challenge', formDescribesChallenge, '#formDescribesChallenge', createChallenge);
     unlock([definesFlow])
 });
 
@@ -646,7 +656,7 @@ definesFlow.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('Flow', formDefinesFlow);
+    showForm('Flow', formDefinesFlow, '#formDefinesFlow', createFlow);
     unlock([buildsRule])
 });
 
@@ -659,7 +669,7 @@ buildsRule.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('Rule', formBuildsRule);
+    showForm('Rule', formBuildsRule, '#formBuildsRule', createRule);
     unlock([balancesRule])
 });
 
@@ -717,7 +727,7 @@ determinesGraphicElement.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('GraphicElement', formDeterminesGraphicElement);
+    showForm('GraphicElement', formDeterminesGraphicElement, '#formDeterminesGraphicElement', createGraphicElement);
     unlock([implementsInterface])
 });
 
@@ -1033,6 +1043,64 @@ developingInterface.addEventListener('click', e => {
     })
 })
 
+// -------------------- Click in the class concepts --------------------
+
+classRule.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Rules',
+        html: showTable(rules, 'Rule'),
+        width: '64em',
+    })
+})
+
+classSpace.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Spaces',
+        html: showTable(spaces, 'Space'),
+        width: '64em',
+    })
+})
+
+classEvent.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Events',
+        html: showTable(events, 'Event'),
+        width: '64em',
+    })
+})
+
+classPlot.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Plots',
+        html: showTable(plots, 'Plot'),
+        width: '64em',
+    })
+})
+
+classChallenge.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Challenges',
+        html: showTable(challenges, 'Challenge'),
+        width: '64em',
+    })
+})
+
+classFlow.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Flows',
+        html: showTable(flows, 'Flow'),
+        width: '64em',
+    })
+})
+
+classGraphicElement.addEventListener('click', e => {
+    Swal.fire({
+        title: 'Graphic Elements',
+        html: showTable(graphicElements, 'GE'),
+        width: '86em',
+    })
+})
+
 // -------------------- Functions --------------------
 
 function checkBlocked(element, title, message) {
@@ -1067,4 +1135,41 @@ function showForm(titleSwal, htmlForm, idForm, functionLocalStorage) {
 
     const formHTML = document.querySelector(idForm)
     formHTML.addEventListener('submit', functionLocalStorage)
+}
+
+function showTable(classConcept, name) {
+    const table = document.createElement('TABLE')
+    const thead = document.createElement('THEAD')
+    const tr1 = document.createElement('TR')
+
+    table.appendChild(thead)
+    thead.appendChild(tr1)
+
+    for (const key in classConcept[0]) {
+        const th = document.createElement('TH')
+        th.textContent = key.toLowerCase().replace(name.toLowerCase(), '')
+        tr1.appendChild(th)
+    }
+
+    const tbody = document.createElement('TBODY')
+
+    table.appendChild(tbody)
+
+    classConcept.forEach(element => {
+        tr2 = document.createElement('TR')
+
+        for (const key in element) {
+            const td = document.createElement('TD')
+            td.textContent = element[key]
+            tr2.appendChild(td)
+        }
+
+        tbody.appendChild(tr2)
+    })
+
+    if (table.outerHTML == '<table><thead><tr></tr></thead><tbody></tbody></table>') {
+        return `Not ${name.toLowerCase()}s to show yet :(`
+    } else {
+        return '<center>' + table.outerHTML + '</center>'
+    }
 }
