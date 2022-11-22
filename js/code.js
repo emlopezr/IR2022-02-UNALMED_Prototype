@@ -61,54 +61,82 @@ const formBuildsRule = `
     <form id="formBuildsRule">
         <div class="formInput">
             <label for="idRule">Identifier</label>
-            <input type="text" name="idRule">
+            <input type="text" name="idRule" id="idRule">
         </div>
 
         <div class="formInput">
             <label for="spacesRule">Associated spaces</label>
-            <input type="text" name="spacesRule" placeholder="IDs separated by a comma">
+            <input type="text" name="spacesRule" placeholder="IDs separated by a comma" id="spacesRule">
         </div>
 
         <div class="formInput">
             <label for="eventsRule">Associated events</label>
-            <input type="text" name="eventsRule" placeholder="IDs separated by a comma">
+            <input type="text" name="eventsRule" placeholder="IDs separated by a comma" id="eventsRule">
         </div>
 
         <div class="formInput">
             <label for="plotsRule">Associated plots</label>
-            <input type="text" name="plotsRule" placeholder="IDs separated by a comma">
+            <input type="text" name="plotsRule" placeholder="IDs separated by a comma" id="plotsRule">
         </div>
 
         <div class="formInput">
             <label for="challengesRule">Associated challenges</label>
-            <input type="text" name="challengesRule" placeholder="Names separated by a comma">
+            <input type="text" name="challengesRule" placeholder="Names separated by a comma" id="challengesRule">
         </div>
 
         <div class="formInput">
             <label for="flowsRule">Associated flows</label>
-            <input type="text" name="flowsRule" placeholder="IDs separated by a comma">
+            <input type="text" name="flowsRule" placeholder="IDs separated by a comma" id="flowsRule">
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitRule">
         </div>
     </form>
 `
+
+function createRule(e) {
+    e.preventDefault()
+
+    const idRule = document.querySelector('#idRule').value
+    const spacesRule = document.querySelector('#spacesRule').value
+    const eventsRule = document.querySelector('#eventsRule').value
+    const plotsRule = document.querySelector('#plotsRule').value
+    const challengesRule = document.querySelector('#challengesRule').value
+    const flowsRule = document.querySelector('#flowsRule').value
+
+    const newRule = {
+        idRule,
+        spacesRule,
+        eventsRule,
+        plotsRule,
+        challengesRule,
+        flowsRule
+    }
+
+    rules.push(newRule)
+    localStorage.setItem('rules', JSON.stringify(rules))
+
+    const btnSubmit = document.querySelector('#submitRule')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'Rule created!')
+}
+
 const formSpecifiesSpace = `
     <form id="formSpecifiesSpace">
         <div class="formInput">
             <label for="idSpace">Identifier</label>
-            <input type="number" name="idSpace">
+            <input type="number" name="idSpace" id="idSpace">
         </div>
 
         <div class="formInput">
             <label for="descriptionSpace">Description</label>
-            <input type="text" name="descriptionSpace">
+            <input type="text" name="descriptionSpace" id="descriptionSpace">
         </div>
 
         <div class="formInput">
             <label for="typeSpace">Type</label>
-            <select name="typeSpace">
+            <select name="typeSpace" id="typeSpace">
                 <option value="linear">Linear</option>
                 <option value="grid">Grid</option>
                 <option value="web">Web</option>
@@ -118,122 +146,237 @@ const formSpecifiesSpace = `
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitSpace">
         </div>
     </form>
 `
+
+function createSpace(e) {
+    e.preventDefault()
+
+    const idSpace = document.querySelector('#idSpace').value
+    const descriptionSpace = document.querySelector('#descriptionSpace').value
+    const typeSpace = document.querySelector('#typeSpace').value
+
+    const newSpace = {
+        idSpace,
+        descriptionSpace,
+        typeSpace
+    }
+
+    spaces.push(newSpace)
+    localStorage.setItem('spaces', JSON.stringify(spaces))
+
+    const btnSubmit = document.querySelector('#submitSpace')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'Space created!')
+}
+
 const formCreatesEvent = `
     <form id="formCreatesEvent">
         <div class="formInput">
             <label for="idEvent">Identifier</label>
-            <input type="number" name="idEvent">
+            <input type="number" name="idEvent" id="idEvent">
         </div>
 
         <div class="formInput">
             <label for="descriptionEvent">Description</label>
-            <input type="text" name="descriptionEvent">
+            <input type="text" name="descriptionEvent" id="descriptionEvent">
         </div>
 
         <div class="formInput">
             <label for="paceEvent">Pace</label>
-            <input type="text" name="paceEvent">
+            <input type="text" name="paceEvent" id="paceEvent">
         </div>
 
         <div class="formInput">
             <label for="coherenceEvent">Coherence</label>
-            <select name="coherenceEvent">
+            <select name="coherenceEvent" id="coherenceEvent">
                 <option value="sense">Sense</option>
                 <option value="nosense">No sense</option>
             </select>
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitEvent">
         </div>
     </form>
 `
+
+function createEvent(e) {
+    e.preventDefault()
+
+    const idEvent = document.querySelector('#idEvent').value
+    const descriptionEvent = document.querySelector('#descriptionEvent').value
+    const paceEvent = document.querySelector('#paceEvent').value
+    const coherenceEvent = document.querySelector('#coherenceEvent').value
+
+    const newEvent = {
+        idEvent,
+        descriptionEvent,
+        paceEvent,
+        coherenceEvent
+    }
+
+    events.push(newEvent)
+    localStorage.setItem('events', JSON.stringify(events))
+
+    const btnSubmit = document.querySelector('#submitEvent')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'Event created!')
+}
+
 const formCreatesPlot = `
     <form id="formCreatesPlot">
         <div class="formInput">
             <label for="idPlot">Identifier</label>
-            <input type="number" name="idPlot">
+            <input type="number" name="idPlot" id="idPlot">
         </div>
 
         <div class="formInput">
             <label for="plotEvents">Plots of the event</label>
-            <input type="text" name="plotEvents" placeholder="IDs separated by a comma">
+            <input type="text" name="plotEvents" placeholder="IDs separated by a comma" id="plotEvents">
         </div>
 
         <div class="formInput">
-            <label for="descriptionEvent">Description</label>
-            <input type="text" name="descriptionEvent">
+            <label for="descriptionPlot">Description</label>
+            <input type="text" name="descriptionPlot" id="descriptionPlot">
         </div>
 
         <div class="formInput">
             <label for="plotCharacters">Characters of the plot</label>
-            <input type="text" name="plotCharacters" placeholder="IDs separated by a comma">
+            <input type="text" name="plotCharacters" placeholder="IDs separated by a comma" id="plotCharacters">
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitPlot">
         </div>
     </form>
 `
+
+function createPlot(e) {
+    e.preventDefault()
+
+    const idPlot = document.querySelector('#idPlot').value
+    const plotEvents = document.querySelector('#plotEvents').value
+    const descriptionPlot = document.querySelector('#descriptionPlot').value
+    const plotCharacters = document.querySelector('#plotCharacters').value
+
+    const newPlot = {
+        idPlot,
+        plotEvents,
+        descriptionPlot,
+        plotCharacters
+    }
+
+    plots.push(newPlot)
+    localStorage.setItem('plots', JSON.stringify(plots))
+
+    const btnSubmit = document.querySelector('#submitPlot')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'Plot created!')
+}
+
 const formDescribesChallenge = `
     <form id="formDescribesChallenge">
         <div class="formInput">
             <label for="nameChallenge">Name</label>
-            <input type="text" name="nameChallenge">
+            <input type="text" name="nameChallenge" id="nameChallenge">
         </div>
 
         <div class="formInput">
-            <label for="descriptionEvent">Description</label>
-            <input type="text" name="descriptionEvent">
+            <label for="descriptionChallenge">Description</label>
+            <input type="text" name="descriptionChallenge" id="descriptionChallenge">
         </div>
 
         <div class="formInput">
             <label for="dutyChallenge">Duty</label>
-            <input type="text" name="dutyChallenge">
+            <input type="text" name="dutyChallenge" id="dutyChallenge">
         </div>
 
         <div class="formInput">
             <label for="levelChallenge">Difficulty level</label>
-            <input type="number" name="levelChallenge">
+            <input type="number" name="levelChallenge" id="levelChallenge">
         </div>
 
         <div class="formInput">
             <label for="skillsChallenge">Required skills</label>
-            <input type="number" name="skillsChallenge">
+            <input type="number" name="skillsChallenge" id="skillsChallenge">
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitChallenge">
         </div>
     </form>
 `
+
+function createChallenge(e) {
+    e.preventDefault()
+
+    const nameChallenge = document.querySelector('#nameChallenge').value
+    const descriptionChallenge = document.querySelector('#descriptionChallenge').value
+    const dutyChallenge = document.querySelector('#dutyChallenge').value
+    const levelChallenge = document.querySelector('#levelChallenge').value
+    const skillsChallenge = document.querySelector('#skillsChallenge').value
+
+    const newChallenge = {
+        nameChallenge,
+        descriptionChallenge,
+        dutyChallenge,
+        levelChallenge,
+        skillsChallenge
+    }
+
+    challenges.push(newChallenge)
+    localStorage.setItem('challenges', JSON.stringify(challenges))
+
+    const btnSubmit = document.querySelector('#submitChallenge')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'Challenge created!')
+}
+
 const formDefinesFlow = `
     <form id="formDefinesFlow">
         <div class="formInput">
             <label for="nameFlow">Name</label>
-            <input type="text" name="nameFlow">
+            <input type="text" name="nameFlow" id="nameFlow">
         </div>
 
         <div class="formInput">
             <label for="grpupFlow">Movement group and order</label>
-            <input type="text" name="grpupFlow">
+            <input type="text" name="grpupFlow" id="grpupFlow">
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitFlow">
         </div>
     </form>
 `
+
+function createFlow(e) {
+    e.preventDefault()
+
+    const nameFlow = document.querySelector('#nameFlow').value
+    const grpupFlow = document.querySelector('#grpupFlow').value
+
+    const newFlow = {
+        nameFlow,
+        grpupFlow
+    }
+
+    flows.push(newFlow)
+    localStorage.setItem('flows', JSON.stringify(flows))
+
+    const btnSubmit = document.querySelector('#submitFlow')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'Flow created!')
+}
 
 const formDeterminesGraphicElement = `
     <form id="formDeterminesGraphicElement">
         <div class="formInput">
             <label for="typeGE">Type</label>
-            <select name="typeGE">
+            <select name="typeGE" id="typeGE">
                 <option value="diegetic">Diegetic</option>
                 <option value="nondiegetic">Non-diegetic</option>
             </select>
@@ -241,17 +384,17 @@ const formDeterminesGraphicElement = `
 
         <div class="formInput">
             <label for="nameGE">Name</label>
-            <input type="text" name="nameGE">
+            <input type="text" name="nameGE" id="nameGE">
         </div>
 
         <div class="formInput">
             <label for="descriptionGE">Description</label>
-            <input type="text" name="descriptionGE">
+            <input type="text" name="descriptionGE" id="descriptionGE">
         </div>
 
         <div class="formInput">
             <label for="imageGE">Image</label>
-            <input type="text" name="imageGE" placeholder="Paste URL of the image here">
+            <input type="text" name="imageGE" placeholder="Paste URL of the image here" id="imageGE">
         </div>
 
         <div class="formGroup">
@@ -259,12 +402,12 @@ const formDeterminesGraphicElement = `
 
             <div class="formInput">
                 <label for="interfaceSpaceGE">Interface space</label>
-                <input type="text" name="interfaceSpaceGE">
+                <input type="text" name="interfaceSpaceGE" id="interfaceSpaceGE">
             </div>
 
             <div class="formInput">
                 <label for="characterGE">Character</label>
-                <input type="text" name="characterGE" placeholder="Character ID">
+                <input type="text" name="characterGE" placeholder="Character ID" id="characterGE">
             </div>
         </div>
 
@@ -273,15 +416,51 @@ const formDeterminesGraphicElement = `
 
             <div class="formInput">
                 <label for="sceneGE">Scene</label>
-                <input type="text" name="sceneGE">
+                <input type="text" name="sceneGE" id="sceneGE">
             </div>
         </div>
 
         <div class="formInput">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" id="submitGraphicElement">
         </div>
     </form>
 `
+
+function createGraphicElement(e) {
+    e.preventDefault()
+
+    const typeGE = document.querySelector('#typeGE').value
+    const nameGE = document.querySelector('#nameGE').value
+    const descriptionGE = document.querySelector('#descriptionGE').value
+    const imageGE = document.querySelector('#imageGE').value
+    const interfaceSpaceGE = document.querySelector('#interfaceSpaceGE').value
+    const characterGE = document.querySelector('#characterGE').value
+    const sceneGE = document.querySelector('#sceneGE').value
+
+    if (typeGE == 'diegetic') {
+        sceneGE = 'NA'
+    } else {
+        interfaceSpaceGE = 'NA'
+        characterGE = 'NA'
+    }
+
+    const newGraphicElement = {
+        typeGE,
+        nameGE,
+        descriptionGE,
+        imageGE,
+        interfaceSpaceGE,
+        characterGE,
+        sceneGE,
+    }
+
+    graphicElements.push(newGraphicElement)
+    localStorage.setItem('graphicElements', JSON.stringify(graphicElements))
+
+    const btnSubmit = document.querySelector('#submitGraphicElement')
+    btnSubmit.style.display = 'none'
+    btnSubmit.insertAdjacentHTML('afterend', 'GraphicElement created!')
+}
 
 // -------------------- Start of the prototype --------------------
 
@@ -415,7 +594,7 @@ specifiesSpace.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showForm('Space', formSpecifiesSpace);
+    showForm('Space', formSpecifiesSpace, '#formSpecifiesSpace', createSpace);
     unlock([createsEvent])
 });
 
@@ -879,10 +1058,13 @@ function unlock(elementList) {
     });
 }
 
-function showForm(titleSwal, htmlForm) {
+function showForm(titleSwal, htmlForm, idForm, functionLocalStorage) {
     Swal.fire({
         title: titleSwal,
         width: '64em',
         html: htmlForm,
     })
+
+    const formHTML = document.querySelector(idForm)
+    formHTML.addEventListener('submit', functionLocalStorage)
 }
