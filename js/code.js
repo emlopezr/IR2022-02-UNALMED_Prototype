@@ -244,7 +244,7 @@ const formCreatesPlot = `
         </div>
 
         <div class="formInput">
-            <label for="plotEvents">Plots of the event</label>
+            <label for="plotEvents">Events of the plot</label>
             <input type="text" name="plotEvents" placeholder="IDs separated by a comma" id="plotEvents">
         </div>
 
@@ -311,7 +311,7 @@ const formDescribesChallenge = `
 
         <div class="formInput">
             <label for="skillsChallenge">Required skills</label>
-            <input type="number" name="skillsChallenge" id="skillsChallenge">
+            <input type="text" name="skillsChallenge" id="skillsChallenge">
         </div>
 
         <div class="formInput">
@@ -476,10 +476,14 @@ function createGraphicElement(e) {
 
 document.addEventListener('DOMContentLoaded', () => {
     Swal.fire(
-        'Alpha Prototype',
-        `You can click in the conditionals, events, dynamic reationships and goal relationships.
-        For example, the first thing you should try is to click on the conditionals and the event
-        to unlock the main dynamic relationship chains of the application.`,
+        'Beta Prototype',
+        `You can left click in the conditionals, events, dynamic reationships, goal relationships.
+        For example, the first thing you should try is to click on the conditionals and the event to
+        unlock the main dynamic relationship chains of the application. When you left click a dynamic
+        relationship, a form appears and you can provide the information to create a register. Also, 
+        you can right click in conditionals, events and dynamic reationships to see it's PS-Based 
+        specification. Finally you can left click on some class concepts to see all the registers that 
+        you have created`,
         'info'
     )
 })
@@ -488,10 +492,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 help.addEventListener('click', e => {
     Swal.fire(
-        'Alpha Prototype',
-        `You can click in the conditionals, events, dynamic reationships and goal relationships.
-        For example, the first thing you should try is to click on the conditionals and the event
-        to unlock the main dynamic relationship chains of the application.`,
+        'Beta Prototype',
+        `You can left click in the conditionals, events, dynamic reationships, goal relationships.
+        For example, the first thing you should try is to click on the conditionals and the event to
+        unlock the main dynamic relationship chains of the application. When you left click a dynamic
+        relationship, a form appears and you can provide the information to create a register. Also, 
+        you can right click in conditionals, events and dynamic reationships to see it's PS-Based 
+        specification. Finally you can left click on some class concepts to see all the registers that 
+        you have created`,
         'info'
     )
 })
