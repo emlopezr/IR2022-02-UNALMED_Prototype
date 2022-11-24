@@ -588,17 +588,17 @@ triggerEvent.addEventListener('click', e => {
 
 conditionalRules.addEventListener('contextmenu', e => {
     e.preventDefault()
-    showInterface('img/specifications/conditionalRules.png');
+    showInterface('img/specifications/conditionals.png');
 });
 
 conditionalInterfaces.addEventListener('contextmenu', e => {
     e.preventDefault()
-    showInterface('img/specifications/conditionalInterfaces.png');
+    showInterface('img/specifications/conditionals.png');
 });
 
 triggerEvent.addEventListener('contextmenu', e => {
     e.preventDefault()
-    showInterface('img/specifications/triggerEvent.png');
+    showInterface('img/specifications/event.png');
 });
 
 // -------------------- Left click dynamic relationships in order --------------------
@@ -706,10 +706,18 @@ balancesRule.addEventListener('click', e => {
                 'success'
             )
         } else {
-            showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
+            Swal.fire(
+                'Unlock',
+                `"Game designer edits rule" unlocked`,
+                'success'
+            )
         }
     } else {
-        showInterface('img/interfaces/7.png', '"Game designer edits rule" unlocked');
+        Swal.fire(
+            'Unlock',
+            `"Game designer edits rule" unlocked`,
+            'success'
+        )
     }
 
 });
@@ -723,7 +731,11 @@ editsRule.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showInterface('img/interfaces/8.png');
+    Swal.fire(
+        'Edit',
+        `Rule edited!`,
+        'success'
+    )
 });
 
 determinesGraphicElement.addEventListener('click', e => {
@@ -765,11 +777,18 @@ implementsInterface.addEventListener('click', e => {
             )
 
         } else {
-            showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
-
+            Swal.fire(
+                'Unlock',
+                `"Game designer edits graphic element" unlocked`,
+                'success'
+            )
         }
     } else {
-        showInterface('img/interfaces/9.png', '"Game designer edits graphic element" unlocked');
+        Swal.fire(
+            'Unlock',
+            `"Game designer edits graphic element" unlocked`,
+            'success'
+        )
     }
 
 });
@@ -783,7 +802,11 @@ editsGraphicElement.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showInterface('img/interfaces/10.png');
+    Swal.fire(
+        'Edit',
+        `Graphic element edited!`,
+        'success'
+    )
 });
 
 generatesWorkProduct.addEventListener('click', e => {
@@ -796,7 +819,11 @@ generatesWorkProduct.addEventListener('click', e => {
     )
 
     if (!blocked) { return }
-    showInterface('img/interfaces/11.png');
+    Swal.fire(
+        'Unlock',
+        `Game design document generated!`,
+        'success'
+    )
 });
 
 
@@ -897,7 +924,7 @@ balancesRule.addEventListener('contextmenu', e => {
     )
 
     if (!blocked) { return }
-    showInterface('img/specifications/balancesRule.png');
+    showInterface('img/specifications/editsRule.png');
 });
 
 editsRule.addEventListener('contextmenu', e => {
@@ -925,7 +952,7 @@ determinesGraphicElement.addEventListener('contextmenu', e => {
     )
 
     if (!blocked) { return }
-    showInterface('img/specifications/determinesGraphicElement.png');
+    showInterface('img/specifications/determinesGE.png');
 });
 
 implementsInterface.addEventListener('contextmenu', e => {
@@ -953,7 +980,7 @@ editsGraphicElement.addEventListener('contextmenu', e => {
     )
 
     if (!blocked) { return }
-    showInterface('img/specifications/editsGraphicElement.png');
+    showInterface('img/specifications/editsGE.png');
 });
 
 generatesWorkProduct.addEventListener('contextmenu', e => {
